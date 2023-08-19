@@ -19,7 +19,7 @@ jobs:
       
       - name: try curl 
         shell: cmd
-        run: curl "https://gmplib.org/download/gmp/gmp-6.3.0.tar.xz" -L -O -J && 7z.exe x gmp-6.3.0.tar.xz && 7z.exe x gmp-6.3.0.tar
+        run: curl "http://gmplib.org/download/gmp/gmp-6.3.0.tar.xz" -L -O -J && 7z.exe x gmp-6.3.0.tar.xz && 7z.exe x gmp-6.3.0.tar
      
       - name: rename gmp_version to gmp
         shell: cmd
