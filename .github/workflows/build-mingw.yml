@@ -17,11 +17,11 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       
-      - name: try aria2 
+      - name: try curl 
         shell: cmd
-        run: aria2c "https://gmplib.org/download/gmp/gmp-6.3.0.tar.xz" && 7z.exe x gmp-6.3.0.tar.xz && 7z.exe x gmp-6.3.0.tar
+        run: curl "https://gmplib.org/download/gmp/gmp-6.3.0.tar.xz" -L -O -J && 7z.exe x gmp-6.3.0.tar.xz && 7z.exe x gmp-6.3.0.tar
      
-      - name: rename boost_version to boost
+      - name: rename gmp_version to gmp
         shell: cmd
         run: rename gmp-6.3.0 gmp
         
